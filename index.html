@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Memes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Impact&family=Arial&family=Comic+Sans+MS&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h1>Gerador de Memes</h1>
+            <div class="control-group">
+                <input type="file" id="imageUpload" accept="image/*">
+                <input type="text" id="topText" placeholder="Texto Superior">
+                <select id="topFont">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Roboto">Roboto</option>
+                </select>
+                <input type="text" id="bottomText" placeholder="Texto Inferior">
+                <select id="bottomFont">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Roboto">Roboto</option>
+                </select>
+                <label>Tamanho da Fonte: 
+                    <input type="range" id="fontSize" min="10" max="100" value="40">
+                </label>
+                <label>Cor do Texto: 
+                    <input type="color" id="textColor" value="#00ffff">
+                </label>
+                <button id="randomBtn">Randomizar</button>
+                <button id="downloadBtn">Baixar Meme</button>
+            </div>
+        </div>
+        <canvas id="memeCanvas" width="600" height="600"></canvas>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
